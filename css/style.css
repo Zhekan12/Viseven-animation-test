@@ -1,0 +1,1338 @@
+
+/* COMMON */
+
+/* @font-face {
+    font-family: 'FuturaMedium';
+    src: url(../font/FuturaMedium.otf); */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+	font-family: 'Open Sans';
+	font-size: 14px;
+	background: #ddd;
+}
+
+
+/* CONTAINER */
+
+
+.presentation-container {
+	width: 1024px;
+	height: 768px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+	background-image: url(../image/bg.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+h1 {
+    margin: 128px 0 0 55px;
+	font-size: 26px;
+	color: #484248;
+}
+
+/* CIRCLES */
+
+.circle-1 img,
+.circle-2  img {
+	width: 138px;
+	height: 151.5px;
+}
+.circle-1,
+.circle-2 {
+	position: absolute;
+	width: 138px;
+	height: 151.5px;
+}
+
+.circle-1 img,
+.circle-2 img {
+	animation: scale-circle 3.6s linear;
+	opacity: 0;
+	transform-origin: center;
+}
+
+.circle-2 {
+    left: 411px;
+    top: 428px;
+}
+.circle-1 {
+    left: 583px;
+    top: 343px;
+}
+@keyframes scale-circle {
+	from {
+		transform: scale(0.5);
+	}
+	  11% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    22% {
+        transform: scale(0.5);
+    }
+    33% {
+        transform: scale(1);
+    }
+    44% {
+        transform: scale(0.5);
+    }
+    55% {
+        transform: scale(1);
+    }
+    66% {
+        transform: scale(0.5);
+    }
+    77% {
+        transform: scale(1);
+    }
+    88% {
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* POPUP */
+
+
+.presentation-container > .overlay  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: 0;
+	animation: show-overlay 0.8s ease-in 4.2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes show-overlay {
+    to {
+		opacity: 0.8;
+	}
+}
+
+.pop-up {
+	height: 496px;
+	width: 750px;
+	position: absolute;
+	top: 160px;
+	left: 132px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 8px;
+	animation: scale-pop-up 1.5s ease-in 4.7s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.pop-up-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 4;
+	background-image: url(../image/z-0.png);
+	background-position: center center;
+	background-size: cover;
+}
+
+@keyframes scale-pop-up {
+	from {
+		transform: scale(0);
+	}
+    to{
+		transform: scale(1);
+		opacity: 1;
+    }
+}
+
+.pop-up .drug-box {
+	position: absolute;
+    width: 233px;
+    top: 45px;
+    left: 260px;
+    z-index: 5;
+}
+
+.pop-up span {
+	position: absolute;
+	top: 25px;
+	line-height: 1em;
+	font-size: 32px;
+	color: #f14405;
+  text-align: center;
+	text-shadow:
+     -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+       1px 1px 0 #fff;
+}
+
+.pop-up span:first-of-type {
+	left: 30px;
+}
+
+.pop-up span:last-of-type {
+	right: 40px;
+}
+
+
+/* LAYERS */
+
+
+.front {
+	width: 98%;
+	z-index: 3;
+	position: absolute;
+	top: 121px;
+	left: 7px;
+}
+
+.radical-container-up,
+.radical-container-low  {
+	position: absolute;
+	z-index: 1;
+}
+
+    .radical-container-up {
+        top: 5px;
+    }
+    .radical-container-low {
+        bottom: 0;
+    }
+    .radical-item {
+        height: 95px;
+        width: 55px;
+        background-image: url(../image/radical.png);
+        background-size: contain;
+
+        background-repeat: no-repeat;
+        position: absolute;
+    }
+
+    .radical-item-1 {
+        top: 136px;
+        left: 45px;
+    }
+
+    .radical-item-2 {
+        top: 68px;
+        left: 72px;
+    }
+
+    .radical-item-3 {
+        top: 89px;
+        left: 210px;
+    }
+
+    .radical-item-4 {
+        top: 66px;
+        left: 490px;
+    }
+
+    .radical-item-5 {
+        top: 65px;
+        left: 617px;
+    }
+
+    .radical-item-6 {
+        bottom: 5px;
+        left: 100px;
+    }
+    .radical-item-7 {
+        bottom: 35px;
+        left: 354px;
+    }
+    .radical-item-8 {
+        bottom: 7px;
+        left: 450px;
+    }
+    .radical-item-9 {
+        bottom: 45px;
+        left: 610px;
+    }
+    .radical-item-10 {
+        bottom: 60px;
+        left: 663px;
+    }
+
+.beans {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 90px;
+	width: 100%;
+}
+    .beans-item {
+        position: absolute;
+        height: 83px;
+        width: 37px;
+        border-radius: 43%;
+        animation: shadow 1.33s cubic-bezier(.9,.09,.65,.79) 15s;
+        animation-iteration-count: 5;
+    }
+    .beans-item-1 {
+        bottom: 0;
+        left: 251px;
+        transform: rotate(-80deg);
+    }
+    .beans-item-2 {
+        top: -15px;
+        right: 150px;
+        transform: rotate(245deg);
+        -moz-transform: rotate(245deg);
+            -o-transform: rotate(245deg);
+        -webkit-transform: rotate(245deg);
+    }
+    .beans-item .shadow {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 88px;
+        height: 49px;
+        top: 17px;
+        left: -25px;
+        transform: rotate(81deg);
+        background-image: url(../image/beans.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+    }
+
+    @keyframes shadow {
+        from {
+                box-shadow: none;
+        }
+        50% {
+                -webkit-box-shadow: 0px 0px 25px 15px rgba(255,255,255,1);
+            -moz-box-shadow: 0px 0px 25px 15px rgba(255,255,255,1);
+            box-shadow: 0px 0px 25px 15px rgba(255,255,255,1);
+        }
+        100% {
+            box-shadow: none;
+        }
+    }
+
+
+    .radical-container-up {
+        animation: radical-container-up-hide 0.5s linear 13s;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes radical-container-up-hide {
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+    .radical-container-low {
+        animation: radical-container-low-hide 0.5s linear 15s;
+        animation-fill-mode: forwards;
+    }
+
+
+    @keyframes radical-container-low-hide {
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+
+
+
+
+.drug-ball-container {
+    position: absolute;
+    width: 100%;
+}
+
+.group {
+    position: absolute;
+    width: 39%;
+}
+
+.group-right {
+    right: 0;
+}
+
+.group-left {
+    left: 0;
+}
+
+.drug-ball {
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    border: 0.4px solid #ac170a;
+    box-shadow: 0 0 0 2px #fff;
+}
+.drug-ball::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    top: 3px;
+    right: 3px;
+    box-shadow: 0 0 4px 2px #fff;
+}
+
+.drug-ball::before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    bottom: 3px;
+    left: 4px;
+    box-shadow: 0 0 2px 1px #fff;
+}
+
+.group-left .drug-ball {
+    background-image: -moz-linear-gradient(top, #ff4a0d 0%, #ffe600 99%);
+    background-image: -webkit-linear-gradient(top, #ff4a0d 0%, #ffe600 99%);
+    background-image: linear-gradient(top, #ff4a0d 0%, #ffe600 99%);
+}
+
+.group-right .drug-ball {
+    background-image: -moz-linear-gradient(top, #a94a27 0%, #f31a00 40%, #f77738 99%);
+    background-image: -webkit-linear-gradient(top, #a94a27 0%, #f31a00 40%, #f77738 99%);
+    background-image: linear-gradient(top, #a94a27 0%, #f31a00 40%, #f77738 99%);
+}
+
+.drug-ball-1 {
+    right: -4px;
+    top: 41px;
+    animation: move-drug-ball-1;
+}
+
+@keyframes move-drug-ball-1 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-165px, 85px);
+    }
+
+    85% {
+        transform: translate(-145px, 410px);
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-144px, 405px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-2 {
+    right: 16px;
+    top: 51px;
+    animation: move-drug-ball-2;
+}
+@keyframes move-drug-ball-2 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    5% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-145px, 85px);
+    }
+
+    75% {
+        transform: translate(-125px, 350px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-125px, 350px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-3 {
+    right: 34px;
+    top: 61px;
+    animation: move-drug-ball-3;
+}
+
+@keyframes move-drug-ball-3 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-140px, 50px);
+    }
+
+    75% {
+        transform: translate(-85px, 340px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-85px, 340px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-4 {
+    right: 0;
+    top: 63px;
+    animation: move-drug-ball-4;
+}
+
+@keyframes move-drug-ball-4 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-185px, 90px);
+    }
+
+    75% {
+        transform: translate(-160px, 400px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-160px, 400px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-5 {
+    right: 16px;
+    top: 71px;
+    animation: move-drug-ball-5;
+}
+
+@keyframes move-drug-ball-5 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    7% {
+        transform: translate(0, 0);
+    }
+
+    42% {
+        transform: translate(-195px, 70px);
+    }
+
+    77% {
+        transform: translate(-110px, 380px);
+        opacity: 1;
+    }
+
+    82% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-110px, 380px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-6 {
+    right: 2px;
+    top: 81px;
+    animation: move-drug-ball-6;
+}
+
+@keyframes move-drug-ball-6 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-235px, 20px);
+    }
+
+    75% {
+        transform: translate(-215px, 335px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-215px, 335px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-7 {
+    right: 30px;
+    top: 83px;
+    animation: move-drug-ball-7;
+}
+
+@keyframes move-drug-ball-7 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-55px, 35px);
+    }
+
+    75% {
+        transform: translate(-40px, 345px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-40px, 345px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-8 {
+    right: 16px;
+    top: 95px;
+    animation: move-drug-ball-8;
+}
+
+@keyframes move-drug-ball-8 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(0, 0);
+    }
+
+    55% {
+        transform: translate(-255px, 0);
+    }
+
+    80% {
+        transform: translate(-235px, 340px);
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-235px, 340px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-9 {
+    right: 0;
+    top: 103px;
+    animation: move-drug-ball-9;
+}
+
+@keyframes move-drug-ball-9 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-95px, 55px);
+    }
+
+    75% {
+        transform: translate(-90px, 340px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-90px, 340px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-10 {
+    right: 14px;
+    top: 113px;
+    animation: move-drug-ball-10;
+}
+
+@keyframes move-drug-ball-10 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-205px, 5px);
+    }
+
+    75% {
+        transform: translate(-185px, 320px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-185px, 320px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-11 {
+    right: 34px;
+    top: 119px;
+    animation: move-drug-ball-11;
+}
+
+@keyframes move-drug-ball-11 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-150px, 10px);
+    }
+
+    75% {
+        transform: translate(-65px, 305px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-65px, 305px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-12 {
+    right: -4px;
+    top: 123px;
+    animation: move-drug-ball-12;
+}
+
+@keyframes move-drug-ball-12 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    5% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-215px, 55px);
+    }
+
+    65% {
+        transform: translate(-205px, 345px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-205px, 345px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-13 {
+    right: 18px;
+    top: 133px;
+    animation: move-drug-ball-13;
+}
+
+@keyframes move-drug-ball-13 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-180px, -45px);
+    }
+
+    75% {
+        transform: translate(-165px, 265px);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-160px, 265px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-14 {
+    left: 0;
+    top: 35px;
+    animation: move-drug-ball-14;
+
+}
+
+@keyframes move-drug-ball-14 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(125px, 65px);
+    }
+    65% {
+        transform: translate(90px, 350px);
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+    to {
+        transform: translate(90px, 350px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-15 {
+    left: 20px;
+    top: 40px;
+    animation: move-drug-ball-15;
+}
+
+@keyframes move-drug-ball-15 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(135px, 35px);
+    }
+
+    65% {
+        transform: translate(160px, 300px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(160px, 300px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-16 {
+    left: 21px;
+    top: 58px;
+    animation: move-drug-ball-16;
+}
+
+@keyframes move-drug-ball-16 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(70px, 50px);
+    }
+
+    65% {
+        transform: translate(90px, 320px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(90px, 320px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-17 {
+    left: 40px;
+    top: 58px;
+    animation: move-drug-ball-17;
+}
+
+@keyframes move-drug-ball-17 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 20px);
+    }
+
+    65% {
+        transform: translate(-35px, 305px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-35px, 305px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-18 {
+    left: 4px;
+    top: 64px;
+    animation: move-drug-ball-18;
+}
+
+@keyframes move-drug-ball-18 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(105px, 50px);
+    }
+
+    65% {
+        transform: translate(140px, 305px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(140px, 305px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-19 {
+    left: 21px;
+    top: 76px;
+    animation: move-drug-ball-19;
+}
+
+@keyframes move-drug-ball-19 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    5% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(25px, 40px);
+    }
+
+    55% {
+        transform: translate(40px, 315px);
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(39px, 314px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-20 {
+    left: 33px;
+    top: 82px;
+    animation: move-drug-ball-20;
+}
+
+@keyframes move-drug-ball-20 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    6% {
+        transform: translate(0, 0);
+    }
+
+    41% {
+        transform: translate(190px, 10px);
+    }
+
+    56% {
+        transform: translate(185px, 285px);
+        opacity: 1;
+    }
+
+    61% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(185px, 285px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-21 {
+    left: 1px;
+    top: 88px;
+    animation: move-drug-ball-21;
+}
+
+@keyframes move-drug-ball-21 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(145px, 55px);
+    }
+
+    65% {
+        transform: translate(195px, 320px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(195px, 320px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-22 {
+    left: 17px;
+    top: 94px;
+    animation: move-drug-ball-22;
+}
+
+@keyframes move-drug-ball-22 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(160px, 60px);
+    }
+
+    65% {
+        transform: translate(200px, 340px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(200px, 340px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-23 {
+    left: 33px;
+    top: 104px;
+    animation: move-drug-ball-23;
+}
+
+@keyframes move-drug-ball-23 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(135px, 10px);
+    }
+
+    65% {
+        transform: translate(185px, 300px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(185px, 300px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-24 {
+    left: 4px;
+    top: 112px;
+    animation: move-drug-ball-24;
+}
+
+@keyframes move-drug-ball-24 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(140px, 0);
+    }
+
+    65% {
+        transform: translate(180px, 265px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(180px, 265px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-25 {
+    left: 19px;
+    top: 120px;
+    animation: move-drug-ball-25;
+}
+
+@keyframes move-drug-ball-25 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(65px, 0);
+    }
+
+    65% {
+        transform: translate(150px, 340px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(150px, 340px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-26 {
+    left: 4px;
+    top: 129px;
+    animation: move-drug-ball-26;
+}
+
+@keyframes move-drug-ball-26 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    7% {
+        transform: translate(0, 0);
+    }
+
+    42% {
+        transform: translate(10px, 5px);
+    }
+
+    57% {
+        transform: translate(10px, 275px);
+        opacity: 1;
+    }
+
+    62% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(10px, 275px);
+        opacity: 0;
+    }
+}
+
+.drug-ball-27 {
+    left: 21px;
+    top: 138px;
+    animation: move-drug-ball-27;
+}
+
+@keyframes move-drug-ball-27 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    15% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(-10px, 30px);
+    }
+
+    65% {
+        transform: translate(-10px, 30px);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(10px, 300px);
+        opacity: 0;
+    }
+}
+.drug-ball {
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-delay: 7.8s;
+    animation-duration: 8.5s;
+}
